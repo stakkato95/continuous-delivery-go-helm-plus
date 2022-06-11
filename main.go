@@ -25,6 +25,6 @@ func main() {
 		os.Getenv("APP_DB_NAME"),
 		config.AppConfig.PostgresService)
 
-	fmt.Println("server is listeningE")
+	fmt.Println("server is listeningF")
 	a.Run(":8010")
 }
