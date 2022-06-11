@@ -2,6 +2,13 @@ apiVersion: v1
 entries:
   continuous-delivery:
   - apiVersion: v2
+    created: "2022-06-11T13:05:41.988774333Z"
+    digest: 2f8470026bd36f4f143387bc882c690ca5bed1210dc6304fa950aa19736544e3
+    name: continuous-delivery
+    urls:
+    - https://github.com/stakkato95/continuous-delivery-go-helm-plus/releases/download/continuous-delivery-0.1.8/continuous-delivery-0.1.8.tgz
+    version: 0.1.8
+  - apiVersion: v2
     created: "2022-06-11T11:50:57.845210847Z"
     digest: a63c9778f4a4c1d89bdadae1614793a5b4002d8be78c12d0b436c75b1451dc1a
     name: continuous-delivery
@@ -78,4 +85,4 @@ entries:
     urls:
     - https://github.com/stakkato95/continuous-delivery-go-helm-plus/releases/download/continuous-delivery-0.1.2/continuous-delivery-0.1.2.tgz
     version: 0.1.2
-generated: "2022-06-11T11:50:57.845231148Z"
+generated: "2022-06-11T13:05:41.988823536Z"
