@@ -1,7 +1,7 @@
 image:
   repository: stakkato95/continuous-delivery-go
   pullPolicy: Always
-  tag: "0.1.7"
+  tag: "0.1.8"
 
 nameOverride: ""
 fullnameOverride: ""
