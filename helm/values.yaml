@@ -1,0 +1,21 @@
+image:
+  repository: stakkato95/continuous-delivery-go
+  pullPolicy: Always
+  tag: "0.1.3"
+
+nameOverride: ""
+fullnameOverride: ""
+
+service:
+  type: ClusterIP
+  http:
+    name: http
+    port: 80
+
+ingress:
+  enabled: true
+
+# values below can be overwritten in parent chart value file
+global:
+  postgres_service:
+    name: postgresql

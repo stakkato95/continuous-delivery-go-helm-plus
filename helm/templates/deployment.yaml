@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Chart.Name }}-deployment
+  labels:
+    {{- include "helm.labels" . | nindent 4 }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      {{- include "helm.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        {{- include "helm.selectorLabels" . | nindent 8 }}
+    spec:
+      volumes:
+        - name: app-env-config
+          configMap:
+            name: app-env
+      containers:
+        - name: {{ .Chart.Name }}-container
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+          - name: APP_DB_USERNAME
+            value: "root"
+          - name: APP_DB_PASSWORD
+            value: "root"
+          - name: APP_DB_NAME
+            value: "test"
+          - name: APP_DB_HOST
+            value: "{{ .Values.global.postgres_service.name }}.{{ .Release.Namespace }}.svc.cluster.local"
+          ports:
+            - name: {{ .Values.service.http.name }}-container
+              containerPort: 8010
+              protocol: TCP
+          volumeMounts:
+          - name: app-env-config
+            mountPath: "/config"
+            readOnly: true
+        

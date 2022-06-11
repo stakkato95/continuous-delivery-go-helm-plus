@@ -1,0 +1,43 @@
+POST http://localhost:{{port}}{{pathPrefix}}/product
+
+{
+    "name": "hello",
+    "price": 100500
+}
+
+###
+
+GET http://localhost:{{port}}{{pathPrefix}}/products
+
+###
+
+GET http://localhost:{{port}}{{pathPrefix}}/product/1
+
+###
+
+PUT http://localhost:{{port}}{{pathPrefix}}/product
+
+{
+    "id": 1,
+    "name": "hello",
+    "price": 100900
+}
+
+
+###
+
+DELETE http://localhost:{{port}}{{pathPrefix}}/products
+
+###
+
+POST http://localhost:{{port}}{{pathPrefix}}/user
+
+{
+    "name": "hello",
+    "city": "hagenberg",
+    "zipcode": "4232"
+}
+
+###
+
+GET http://localhost:{{port}}{{pathPrefix}}/users

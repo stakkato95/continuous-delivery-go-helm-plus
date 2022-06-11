@@ -1,0 +1,12 @@
+{
+    "rest-client.environmentVariables": {
+        "local": {
+            "port": "8010",
+            "pathPrefix": ""
+        },
+        "k8s": {
+            "port": "80",
+            "pathPrefix": "/delivery"
+        }
+    }
+}
