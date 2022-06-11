@@ -1,1 +1,1 @@
-helm install app helm
+helm install app ../helm --set image.pullPolicy=IfNotPresent
