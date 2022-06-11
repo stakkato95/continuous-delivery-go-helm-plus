@@ -26,11 +26,11 @@ clear:
 
 # docker
 docker-build-image:
-	docker build -t stakkato95/continuous-delivery-go:0.1.3 . -f Dockerfile
+	docker build -t stakkato95/continuous-delivery-go:0.1.4 . -f Dockerfile
 .PHONY:docker-build-image
 
 docker-push-image: docker-build-image
-	docker push stakkato95/continuous-delivery-go:0.1.3
+	docker push stakkato95/continuous-delivery-go:0.1.4
 .PHONY:docker-push-image
 
 # docker-run-tmp-container:
