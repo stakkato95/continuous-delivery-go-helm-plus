@@ -1,3 +1,17 @@
 apiVersion: v2
 name: continuous-delivery
-version: 0.1.8
+description: A Helm chart for simple continuous delivery app
+
+home: https://github.com/stakkato95/continuous-delivery-go
+
+maintainers:
+  - name: Artsiom Kaliaha
+    email: stakkato95@gmail.com
+
+type: application
+
+# Chart version. Versions are expected to follow Semantic Versioning (https://semver.org/)
+version: 0.1.9
+
+# Application version
+appVersion: "0.1.0"
